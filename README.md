@@ -13,12 +13,7 @@ How to run:
 - On terminal, execute:
     
         java -jar jflex-1.6.1.jar Lexer.flex
-    
         ./yacc.linux -Jthrows="Exception" -Jextends=ParserImpl -Jnorun -J ./Parser.y
-        
         javac *.java
-        
         java TestEnv        #to test the environment
-        
         java Program sample/minc/test_01_main_succ.minc
-
