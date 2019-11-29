@@ -21,21 +21,21 @@ What it does:
 ```
 java -jar jflex-1.X.X.jar Lexer.flex
 ```
-5. 
+5. Execute the following YACC command (this particular one of for linux based operating systems)
 ```
 ./yacc.linux -Jthrows="Exception" -Jextends=ParserImpl -Jnorun -J ./Parser.y
 ```
-4. Compile all java files using the following:
+6. Compile all java files using the following:
 ```
 javac *.java
 ```
-5. Place your test files, or the files provided in this repo into the source directory.
+7. Test the environment
 ```
-java TestEnv        #to test the environment
+java TestEnv
 ```
-6. Run program and capture its output as follows:
+8. Run program and capture its output as follows:
 ```
-java Program sample/minc/test_01_main_succ.minc
+java Program testcases/<file name here>.minc
 ```
 
 ## Related Repos:
