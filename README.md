@@ -7,7 +7,7 @@ What it does:
 1) Read an input mini-C source program using jflex for tokenizing. 
 2) Check if the input program satisfies the (given subset) of mini-C grammar rules. 
 3) Parse the input program using recursive predictive parser. 
-4) If there is no syntax error, program should print “Success: no syntax error found.”; otherwise should print the line and column numbers of the first error and its corresponding message. 
+4) If there is no syntax error, program should print “Success: no syntax error found.”; otherwise should print the line and row numbers of the first error and its corresponding message. 
 
 ## How it works:
 
