@@ -1,0 +1,8 @@
+Success: no syntax error is found.
+
+Following is the indentation-updated source code:
+
+int main(int a)
+{
+}
+
