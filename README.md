@@ -1,19 +1,46 @@
 # Syntax-Checker
 
+## Description:
+The main goal of this project is to build a simple syntax checker implemented using java for a minified version of the C langauge (Mini-C)
 
-Notes:
-    
-- All test cases including all but last extra-credit case should be fully functional.
+What it does:
+1) Read an input mini-C source program using jflex for tokenizing. 
+2) Check if the input program satisfies the (given subset) of mini-C grammar rules. 
+3) Parse the input program using recursive predictive parser. 
+4) If there is no syntax error, program should print “Success: no syntax error found.”; otherwise should print the line and column numbers of the first error and its corresponding message. 
 
-How to run:
-- place yacc.linux file in same directory
-- place jflex-1.6.1.jar in same directory
-- place all zip file contents in same directory
-- place folder in directory with path ~/sample/minc/ <PLACE MINC FILES HERE>
-- On terminal, execute:
-    
-        java -jar jflex-1.6.1.jar Lexer.flex
-        ./yacc.linux -Jthrows="Exception" -Jextends=ParserImpl -Jnorun -J ./Parser.y
-        javac *.java
-        java TestEnv        #to test the environment
-        java Program sample/minc/test_01_main_succ.minc
+## How it works:
+
+1. Clone this into your source directory
+
+2. Download jflex-1.X.X.jar from https://jflex.de/download.html and place it in the source directory.
+
+3. Open your terminal and cd to your source directory.
+
+4. Compile Lexer.jflex as follows, make sure your jflex number is the same as the one you downloaded:
+```
+java -jar jflex-1.X.X.jar Lexer.flex
+```
+5. 
+```
+./yacc.linux -Jthrows="Exception" -Jextends=ParserImpl -Jnorun -J ./Parser.y
+```
+4. Compile all java files using the following:
+```
+javac *.java
+```
+5. Place your test files, or the files provided in this repo into the source directory.
+```
+java TestEnv        #to test the environment
+```
+6. Run program and capture its output as follows:
+```
+java Program sample/minc/test_01_main_succ.minc
+```
+
+## Related Repos:
+[Lexical-Tokenizer](https://github.com/khalkmq/Lexical-Tokenizer)
+
+[Lexical-Analyzer](https://github.com/khalkmq/Lexical-Analyzer)
+
+[Syntax Checker](https://github.com/khalkmq/Syntax-Checker)
